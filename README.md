@@ -35,6 +35,21 @@ CLI tool for query, add, update, and delete configuration and alarm data on Cisc
   -z    true or false. if set to true the check will return OK status if zero instances where found. Default is false.
 ```
 
+## Build from source
+
+Requirements:
+
+- Go installed (https://golang.org/dl/)
+
+
+```bash
+git clone "https://github.com/hgrimm/intersight_api_generic_query.git"
+cd intersight_api_generic_query
+go mod init example.com/intersight_api_generic_query
+go get github.com/go-fed/httpsig
+go build
+```
+
 
 ## Example API Query 
 
