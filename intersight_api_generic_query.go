@@ -320,11 +320,3 @@ func loadPrivateKey(filename string) (*rsa.PrivateKey, error) {
 	return x509.ParsePKCS1PrivateKey(pem.Bytes)
 }
 
-func loadPrivateKeyOld(keyData []byte) (*rsa.PrivateKey, error) {
-	pem, _ := pem.Decode(keyData)
-	if pem.Type != "RSA PRIVATE KEY" {
-		return nil, fmt.Errorf("RSA private key is of the wrong type: %s", pem.Type)
-	}
-
-	return x509.ParsePKCS1PrivateKey(pem.Bytes)
-}
